@@ -20,7 +20,7 @@ function Timer() {
           trailColor: 'rgba(255,255,255,.2)',
         })}
       />
-      <div>
+      <div style={{marginTop:'20px'}}>
         <PlayButton/>
         </div>
     </div>
