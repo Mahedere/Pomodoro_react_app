@@ -1,7 +1,5 @@
-function SettingsContext(){
-  return (
-    <div>SettingsContext</div>
-  )
-}
+import react from 'react';
 
-export default SettingsContext
+const SettingsContext = react.createContext({});
+
+export default SettingsContext;
