@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import ReactSlider from 'react-slider';
 import SettingsContext from './SettingsContext';
-
+import BackButton from './BackButton';
 function Settings() {
   const settingsInfo=useContext(SettingsContext);
     return (
@@ -23,6 +23,7 @@ function Settings() {
             onChange={newValue => settingsInfo.setBreakMinutes(newValue)}
             min={1}
             max={120}/>
+           <BackButton/>
         </div>
     )
 }
