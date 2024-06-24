@@ -7,9 +7,12 @@ function App() {
   const [showSettings, setShowSettings] = useState(true);
   return (
     <main>
-    
-      {showSettings ? <Settings /> : <Timer />}
-
+      <SettingsContext.Provider value={{
+        workMinutes:45,
+        breakMinutes:15,
+      }}>
+        {showSettings ? <Settings /> : <Timer />}
+      </SettingsContext.Provider>
     </main>
   )
 }
