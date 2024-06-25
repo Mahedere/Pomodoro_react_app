@@ -3,7 +3,9 @@ import ReactSlider from 'react-slider';
 import SettingsContext from './SettingsContext';
 import BackButton from './BackButton';
 function Settings() {
-    const settingsInfo = useContext(SettingsContext);
+    // const settingsInfo = useContext(SettingsContext);
+    // const [isPaused, setIsPaused] = useState(true);
+    // const isPausedRef = useRef(isPaused);
     return (
         <div style={{ textAlign: 'left' }}>
 
