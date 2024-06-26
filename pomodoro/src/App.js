@@ -4,7 +4,7 @@ import SettingsContext from './components/SettingsContext.js';
 import Timer from './components/Timer.js'
 import { useState } from 'react';
 function App() {
-  const [showSettings, setShowSettings] = useState(true);
+  const [showSettings, setShowSettings] = useState(false);
   const [workMinutes,setWorkMinutes]=useState(45);
   const [breakMinutes,setBreakMinutes]=useState(15);
   return (

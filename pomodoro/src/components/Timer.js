@@ -12,7 +12,8 @@ const green = '#4aec8c';
 
 function Timer() {
   const settingsInfo=useContext(SettingsContext);
-
+const [isPaused,setIsPaused]=useState(true);
+const isPausedRef=useRef(isPaused);
   return (
     <div>
       <CircularProgressbar
@@ -28,7 +29,7 @@ function Timer() {
       />
       <div style={{marginTop:'20px'}}>
         <PlayButton/>
-        <PauseButton/>
+        <PauseButton onClick={()=>{setIsPaused(false);isPausedRef.current=false;}}/>
         </div>
         <div style={{marginTop:'20px'}}>
     <SettingsButton onClick={()=>settingsInfo.setShowSettings(true)}/>
