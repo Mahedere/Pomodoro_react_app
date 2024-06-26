@@ -12,7 +12,7 @@ const green = '#4aec8c';
 
 function Timer() {
   const settingsInfo=useContext(SettingsContext);
-  
+
   return (
     <div>
       <CircularProgressbar
@@ -31,7 +31,7 @@ function Timer() {
         <PauseButton/>
         </div>
         <div style={{marginTop:'20px'}}>
-    <SettingsButton/>
+    <SettingsButton onClick={()=>settingsInfo.setShowSettings(true)}/>
         </div>
     </div>
   );
