@@ -24,10 +24,24 @@ useEffect(()=>{
   const nextSeconds=(nextMode=== 'work'?settingsInfo.workMinutes:settingsInfo.breakMinutes)*60;
   setMode(nextMode)
   modeRef.current=nextMode
-}})
+  setSecondsLeft(nextSeconds)
+  secondsLeftRef.current=nextSeconds
+}
+secondsLeftRef.current=settingsInfo.workMinutes*60
+setSecondsLeft(secondsLeftRef.current)
+const interval=setInterval(()=>{
+  if(isPausedRef.current){
+    return;
+  }
+  if(secondsLeftRef.current===0){
+    return switchMode();
+  }
+})
+})
 function plat(){
   secondsLeftRef.current--;
   setSecondsLeft(secondsLeftRef.current)
+ 
 }
   return (
     <div>
