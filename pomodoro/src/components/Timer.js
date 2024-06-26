@@ -11,9 +11,24 @@ const red = '#f54e4e';
 const green = '#4aec8c';
 
 function Timer() {
-  const settingsInfo=useContext(SettingsContext);
-const [isPaused,setIsPaused]=useState(true);
-const isPausedRef=useRef(isPaused);
+  const settingsInfo=useContext(SettingsContext)
+const [isPaused,setIsPaused]=useState(true)
+const isPausedRef=useRef(isPaused)
+const [mode,setMode]=useState('work')
+const modeRef=useRef(mode)
+const [secondsLeft,setSecondsLeft]=useState(0)
+const secondsLeftRef=useRef(secondsLeft)
+useEffect(()=>{
+  function switchMode(){
+  const nextMode=modeRef.current ==='work'?'break':'work';
+  const nextSeconds=(nextMode=== 'work'?settingsInfo.workMinutes:settingsInfo.breakMinutes)*60;
+  setMode(nextMode)
+  modeRef.current=nextMode
+}})
+function plat(){
+  secondsLeftRef.current--;
+  setSecondsLeft(secondsLeftRef.current)
+}
   return (
     <div>
       <CircularProgressbar
