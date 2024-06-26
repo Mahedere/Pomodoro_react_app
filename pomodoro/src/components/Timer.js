@@ -8,7 +8,12 @@ import SettingsContext from "./SettingsContext";
 
 const red = '#f54e4e';
 const green = '#4aec8c';
-
+const header=[
+ {name:'work'
+ },{
+  name:'rest'
+ }
+]
 function Timer() {
   const settingsInfo = useContext(SettingsContext);
 
@@ -30,7 +35,6 @@ function Timer() {
     function switchMode() {
       const nextMode = modeRef.current === 'work' ? 'break' : 'work';
       const nextSeconds = (nextMode === 'work' ? settingsInfo.workMinutes : settingsInfo.breakMinutes) * 60;
-
       setMode(nextMode);
       modeRef.current = nextMode;
 
@@ -66,7 +70,7 @@ function Timer() {
 
   return (
     <div>
-      
+      <h1>{mode==='work' ?'Work Mahi' :'Rest you deserve it'}</h1>
       <CircularProgressbar
         value={percentage}
         text={minutes + ':' + seconds}
