@@ -3,9 +3,7 @@ import ReactSlider from 'react-slider';
 import SettingsContext from './SettingsContext';
 import BackButton from './BackButton';
 function Settings() {
-    // const settingsInfo = useContext(SettingsContext);
-    // const [isPaused, setIsPaused] = useState(true);
-    // const isPausedRef = useRef(isPaused);
+    const settingsInfo = useContext(SettingsContext);
     return (
         <div style={{ textAlign: 'left' }}>
 
@@ -25,7 +23,7 @@ function Settings() {
                 onChange={newValue => settingsInfo.setBreakMinutes(newValue)}
                 min={1}
                 max={120} />
-            <div style={{textAlign:'center',marginTop:'20px'}}>     <BackButton /></div>
+            <div style={{ textAlign: 'center', marginTop: '20px' }}>     <BackButton onClick={()=>settingsInfo.setShowSettings(false)}/></div>
         </div>
     )
 }

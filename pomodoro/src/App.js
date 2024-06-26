@@ -10,6 +10,8 @@ function App() {
   return (
     <main>
       <SettingsContext.Provider value={{
+        showSettings,
+        setShowSettings,
         workMinutes,
         breakMinutes,
         setWorkMinutes,

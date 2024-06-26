@@ -5,11 +5,14 @@ import PlayButton from "./PlayButton";
 import PauseButton from "./PauseButton";
 import SettingsButton from "./SettingsButton";
 import './slider.css'
-
+import { useContext,useState,useEffect,useRef } from "react";
+import SettingsContext from "./SettingsContext";
 const red = '#f54e4e';
 const green = '#4aec8c';
 
 function Timer() {
+  const settingsInfo=useContext(SettingsContext);
+  
   return (
     <div>
       <CircularProgressbar
