@@ -70,7 +70,7 @@ function Timer() {
 
   return (
     <div>
-      <h1>{mode==='work' ?'Work Mahi' :'Rest you deserve it'}</h1>
+      <h1>{mode==='work' ?'Work ' :'Rest you deserve it'}</h1>
       <CircularProgressbar
         value={percentage}
         text={minutes + ':' + seconds}
@@ -86,6 +86,8 @@ function Timer() {
       </div>
       <div style={{marginTop:'20px'}}>
         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
+      </div>
+      <div> <h3>Copyrighted by @MahedereTech</h3>
       </div>
     </div>
   );
