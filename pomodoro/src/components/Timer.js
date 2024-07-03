@@ -7,11 +7,6 @@ import SettingsContext from "./SettingsContext";
 const red = '#f54e4e';
 const green = '#4aec8c';
 
-const header = [
-  { name: 'work' },
-  { name: 'rest' }
-];
-
 function Timer() {
   const settingsInfo = useContext(SettingsContext);
 
@@ -83,8 +78,8 @@ function Timer() {
       <div style={{ marginTop: '20px' }}>
         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
       </div>
-      <div> 
-        <h3>Copyrighted by @MahedereTech</h3>
+      <div className="footer">
+        <h3>Copyrighted by <a href="https://www.linkedin.com/in/mahedere-tebebe/" className="footer-link">@MahedereTech</a></h3>
       </div>
     </div>
   );

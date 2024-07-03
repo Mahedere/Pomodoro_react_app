@@ -59,3 +59,18 @@ label{
     right: 10px;  /* Adjust this value to move the button left if needed */
   }
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+
+}
+.footer-link {
+  color: #fff; /* Make the link color visible */
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
