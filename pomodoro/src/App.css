@@ -52,3 +52,10 @@ label{
     background-position: center 8%;
   }
 }
+@media (max-width: 600px) {
+  button.with-text {
+    position: absolute;
+    top: 10px;    /* Adjust this value to move the button down if needed */
+    right: 10px;  /* Adjust this value to move the button left if needed */
+  }
+}
