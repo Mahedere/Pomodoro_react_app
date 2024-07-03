@@ -4,6 +4,9 @@ import PauseButton from "./PauseButton";
 import SettingsButton from "./SettingsButton";
 import SettingsContext from "./SettingsContext";
 
+const red = '#f54e4e';
+const green = '#4aec8c';
+
 const header = [
   { name: 'work' },
   { name: 'rest' }
@@ -66,7 +69,10 @@ function Timer() {
   return (
     <div>
       <h1>{mode === 'work' ? 'Work ' : 'Rest you deserve it'}</h1>
-      <div style={{ fontSize: '100px', color: '#fff' }}>
+      <div style={{ 
+        fontSize: '48px', 
+        color: mode === 'work' ? red : green 
+      }}>
         {minutes}:{seconds}
       </div>
       <div style={{ marginTop: '20px' }}>
@@ -77,7 +83,8 @@ function Timer() {
       <div style={{ marginTop: '20px' }}>
         <SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
       </div>
-      <div> <h3>Copyrighted by @MahedereTech</h3>
+      <div> 
+        <h3>Copyrighted by @MahedereTech</h3>
       </div>
     </div>
   );

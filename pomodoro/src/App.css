@@ -4,7 +4,10 @@
 }
 
 body{
-  background-color: #4a3f50;
+  background-image: url('../assets/ba.jfif');
+  /* background-size: cover;   */
+  /* background-position: center;   */
+  /* background-repeat: no-repeat;  */
   color: #eee;
 }
 main{
@@ -42,4 +45,10 @@ label{
   margin-bottom: 10px;
   margin-top: 20px;
   text-transform: capitalize;
+}
+@media (max-width: 600px) {
+  body {
+    background-size: cover;  
+    background-position: center 8%;
+  }
 }
